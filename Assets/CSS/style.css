@@ -1,0 +1,260 @@
+@font-face{
+    font-family: 'shockwave';
+    src:url('../../../projetart/Assets/font/Shockwave.ttf');
+}
+*{ /*structurer le code d'origine avant les modif's*/
+    padding:0;
+    margin:0;
+    box-sizing:border-box
+}
+html,body{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    background-color:#E6BBAD ;
+}
+
+header{ /*Photo css et logo */
+    background-image: url('../../../projetart/Assets/images/image4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100% ;
+    height: 100% ;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+ul{ /* Barre de naviguation*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+}
+li{ /* Cases pour les différents boutons */
+    float: left;
+    border-right: 1px solid #bbb;
+    font-family:"shockwave", cursive; 
+    font-size:25px;
+}
+li a{ /*Différents boutons*/
+    display: block;
+    color: rgb(223, 150, 98);
+    text-align: center;
+    height: 70px;
+    padding: 15px;
+    text-decoration: none;
+}
+li a:hover { /*Survol des boutons*/
+    background-color: #111;
+}
+li:last-child{
+    border-right: none;
+    float: right;
+    width: 35vw;
+}
+.active{ /* Barre de recherche */
+    background-color: rgb(223, 150, 98);
+    padding: 10px;
+    border:none;
+    font-family: 'shockwave';
+    font-size: 25px;
+    width: 35%;
+    height: 73px;
+}
+.active:hover{ /* Survol du bouton recherche */
+    background-color:rgb(219, 144, 90);
+}
+#recherche { /* Barre d'inscription de recherche*/
+    width: 60%;
+    height:73px;
+    float: left;
+    font-size: 20px;
+    font-family: 'shockwave';
+
+}
+p{ /* Paragraphes */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    margin:0 40px 40px ;
+    text-align: justify;
+    color: #000000;
+}
+input{
+    height: 100%;
+}
+.color{ /* Couleur de fond du 1e textes */
+    background-color:#E6BBAD;
+    padding: 0;
+}
+h1{/*J'identifie mes titre de 1e niv pour modifier la police, la taille, la couleur, souligner, centrer le texte, mettre mage à 0*/
+    font-family: 'shockwave';
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    text-decoration: underline ;
+    text-align: center;
+    margin:0;
+}
+h1 span{ /*J'identifie mon titre 1 pour lui mettre un couleur de fond , une couleur et une bordure*/
+    background-color:rgb(223, 150, 98);
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+h2:hover{ /*Je met un survol sur mes titres 'noms de ville' avec un effet de couleur*/
+    background-color: #f7efd6;
+}
+.container-bloc{ /*Je structure mes class c-b en définissant une largueur, hauteur, placemt en colonne, justifie le texte au centre, + une marge*/
+    width: 30%;
+    height: 30%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    margin: 10px 0 10px 0;
+}
+#container-1{ /*Je met une marge autour de mon container 'création'*/
+    margin: 10px 0 10px 0;
+}
+#container-1 > div{ /*Je selectionne les enfants de mon id container-1 avec un chevron ouvert*/
+    width: 30%;
+    height: 40vh;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+#container-1 img{ /*J'identifie mes images (kids de c-1*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+h2{ /*Je change la police et j'ai ajouté une marge-en-haut*/
+    font-family: 'shockwave';
+    font-size: 22px;
+    margin-block-end: 0px;
+    margin-top: 10px;
+    color: black;
+}
+.container-bloc > p{ /*J'identifie le paragraphe du c-b pour modifier la couleur de fond, la largeur et indiquer une marge*/
+    background-color:rgb(223, 150, 98);
+    width: 30vw;
+    margin: 0;
+}
+.container-bloc > p,i{ /*J'identifie l'arrière petit enfant de c-b en passant par p et en affectant i avec une position a droite et une largeur de couleur automatique*/
+    float: right;
+    width: auto;
+}
+i:hover{ /*J'indique un survol de couleur au i pour montrer un lien vers une page*/
+    background-color:rgb(189, 123, 75);
+}
+.creations h2{ /*J'identifie le kid de la div 'créa' pour y ajouter une marge */
+    margin:30px ;
+}
+.footer-container { /*Je selectionne le footer pour le disposer en flex, justifier le contenu, aligner les thèmes au centre, mettre un marge interne, une ligne de hauteur et une couleur de fond*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    line-height: 20px;
+    background-color: rgb(223, 150, 98);
+}
+.footer-container p{ /*J'indique le paragraphe de la class 'f-c' */
+    margin-bottom: 0;
+}
+.footer-container p a{ /*J'indique le lien, petits kids de f-c pour retirer les decorat° et mettre une couleur noire */
+    text-decoration: none;
+    color: black;
+}
+
+.images{ /*J'identifie les images pour mettre une largeur maximal et une hauteur automatique*/
+    max-width: 100%;
+    height: auto;
+}
+
+
+@media screen AND (max-width:480px){ /*Je permets une adaptation à différents formats informatique*/
+
+    html,body{
+        width: 100%;
+        height: 150vh;
+        box-sizing: border-box;
+        margin:0px;
+        padding:0;
+    }
+    header{
+        background-image: url('../../../projetart/Assets/images/image4.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100% ;
+        height: 20vh ;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+    }
+    .site-header{
+        width: 10px;
+        height: 10vh;
+    }
+
+    ul{
+        list-style-type: none;/*pour retirer les pts de la liste. Je code ce que je veux qui soit changé sur la version (mobile...).*/
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        top: 0;
+        width: 120px;
+        height:500px;
+    }
+    li{
+        border-right: 0px solid #bbb;
+        font-family:'shockwave', cursive; 
+        font-size:18px;
+        justify-content: center;
+    }
+    li a{
+        display: block;
+        color: white;
+        text-align: center;
+        height: 50px;
+        padding: 10px;
+        text-decoration: none;
+    }
+    #recherche {
+        margin-top: 0x;
+        width: 68%;
+        height:73px;
+        float: right;
+        font-size: 20px;
+    }
+    .active{
+        background-color: #afafac;
+        margin: 0 30px;
+        border:none;
+        text-align: center;
+        font-family: 'shockwave';
+        font-size: 20px;
+        width: 91%;
+        height: 73px;
+    }
+    .active:hover{
+        background-color: #caccc2;
+    }
+    footer img{
+        width: 100%;
+        height: 40px;
+    }
+}
